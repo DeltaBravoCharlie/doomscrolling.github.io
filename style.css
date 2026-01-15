@@ -1,0 +1,53 @@
+/* Page background and height */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 5000px; /* Adjust based on video length */
+  background: #000;
+  overscroll-behavior: contain; /* prevents bounce on iOS */
+}
+
+/* Sticky video container */
+#video-container {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  overflow: hidden;
+}
+
+/* Video styling */
+#doom-video {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  display: block;
+}
+
+/* Optional: overlay styles if you add clues later */
+.overlay {
+  position: absolute;
+  cursor: pointer;
+  border: 2px solid rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.1);
+  transition: transform 0.2s;
+  touch-action: manipulation; /* improves touch responsiveness */
+}
+
+.overlay:hover {
+  transform: scale(1.05);
+  border-color: yellow;
+  background: rgba(255,255,0,0.2);
+}
+
+.overlay span {
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  top: -18px;
+  left: 0;
+}
